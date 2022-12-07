@@ -1,5 +1,5 @@
 let firstCard = getRandomCard()
-let secondCard = 4
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack = false
@@ -14,7 +14,7 @@ function startGame() {
 }
 
 function getRandomCard() {
-    
+    return Math.floor(Math.random() * 12) + 1
 }
 
 function renderGame() {
@@ -38,7 +38,7 @@ function renderGame() {
 }
 
 function newCard() {
-    let newCard = Math.floor(Math.random() * 12) + 1
+    let newCard = getRandomCard() 
     sum += newCard
     cards.push(newCard)
     renderGame()
